@@ -17,7 +17,9 @@ export const App: React.FC = () => {
             {'page__button--selected': isIndividual }
           )}
           onClick={() => {
-            setIsIndividual(!isIndividual);
+            if (!isIndividual) {
+              setIsIndividual(true);
+            }
           }}
         >
             Фіз.Особа
@@ -29,7 +31,9 @@ export const App: React.FC = () => {
           {'page__button--selected': !isIndividual }
         )}
         onClick={() => {
-          setIsIndividual(!isIndividual);
+          if (isIndividual) {
+            setIsIndividual(false);
+          }
         }}
         >
           Юр.Особа

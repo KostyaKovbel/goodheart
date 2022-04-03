@@ -92,7 +92,7 @@ export const UserForm: React.FC = () => {
             <input 
               type="text" 
               className="form__input" 
-               
+               required
               value={name}
               onChange={(event) => {
                 charField(event, setName)
@@ -105,7 +105,7 @@ export const UserForm: React.FC = () => {
             <input 
               type="text" 
               className="form__input" 
-              
+              required
               value={surname}
               onChange={(event) => {
                 charField(event, setSurname)
@@ -119,7 +119,7 @@ export const UserForm: React.FC = () => {
           <input 
             type="text" 
             className="form__input"
-            
+            required
             value={country}
             onChange={(event) => {
               charField(event, setCountry)
@@ -132,7 +132,7 @@ export const UserForm: React.FC = () => {
           <input 
             type="text" 
             className="form__input"
-            
+            required
             value={companyName}
             onChange={(event) => {
               charField(event, setCompanyName)
@@ -146,7 +146,7 @@ export const UserForm: React.FC = () => {
             <input 
               type="text" 
               className="form__input"
-              
+              required
               value={city}
               onChange={(event) => {
                 charField(event, setCity)
@@ -158,7 +158,7 @@ export const UserForm: React.FC = () => {
             <input 
               type="text" 
               className="form__input"
-              
+              required
               value={state}
               onChange={(event) => {
                 charField(event, setState)
@@ -172,7 +172,7 @@ export const UserForm: React.FC = () => {
           <input 
             type="text" 
             className="form__input"
-            
+            required
             value={email}
             onChange={(event) => {
               setEmailError(false);
@@ -188,7 +188,7 @@ export const UserForm: React.FC = () => {
           <input 
             type="text" 
             className="form__input"
-            
+            required
             value={adress}
             onChange={(event) => {
               setAdress(event.target.value)
@@ -201,7 +201,7 @@ export const UserForm: React.FC = () => {
           <input 
             type="text" 
             className="form__input"
-            
+            required
             value={phone}
             onChange={(event) => {
               numberField(event, setPhone)
@@ -217,7 +217,7 @@ export const UserForm: React.FC = () => {
             <input 
               type="text" 
               className="form__input"
-              
+              required
               value={index}
               maxLength={5}
               onChange={(event) => {
