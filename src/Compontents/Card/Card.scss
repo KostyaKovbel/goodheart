@@ -1,0 +1,58 @@
+@import '../../utility/variables.scss';
+
+.card  {
+  text-align: start;
+  font-family: Geometry-bold;
+  font-size: 10px;
+
+  &__info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: $additional-color;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+
+    font-size: 10px;
+    color: $additional-color;
+  }
+
+  &__info-title {
+    margin-bottom: 2px;
+
+    text-align: start;
+    color: #fff;
+
+  }
+
+  &__number {
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__field {
+    outline: none;
+    border: none;
+    height: 26px;
+    border-radius: 4px;
+
+  }
+
+  &__number-field {
+    width: 50px;
+  }
+
+  &__security {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__security-field {
+    width: 90px;
+  }
+}

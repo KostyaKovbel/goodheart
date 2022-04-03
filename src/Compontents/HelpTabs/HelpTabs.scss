@@ -1,0 +1,53 @@
+.help {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  max-width: 100%;
+
+  &__title {
+    width: 100px;
+    display: flex;
+    text-align: start;
+
+    color: #c8d5e5;
+    font-size: 12px;
+    font-weight: 900;
+
+    transition: 0.3s;
+
+    &--selected {
+      color: #535770;
+    }
+  }
+
+  &__icon {
+    fill: #c8d5e5;
+    transition: 0.3s;
+  }
+
+  &__icon--selected {
+    fill: #fff;
+    border-color: #926399;
+  }
+
+  &__button-place {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__button {
+    padding: 5px 10px;
+
+    height: 55px;
+    width: 55px;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+  }
+}
+

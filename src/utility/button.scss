@@ -1,0 +1,17 @@
+.button {
+  padding: 0;
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #c8d5e5;
+
+
+  &:hover {
+    background-color: #926399;
+    border-color: #926399;
+  }
+
+  &--selected {
+    background-color: #926399;
+    border-color: #926399;
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../utility/variables.scss";
+@import "../../utility/fonts/fonts.scss";
+
+.form {
+  margin: 0 auto;
+
+  &__user-info {
+    margin: 0 auto 40px;
+  
+    display: grid;
+    grid-template-columns: repeat(2, 290px);
+    column-gap: 210px;
+  }
+
+  &__text {
+    font-style: "Geometry-ExtraBold";
+    color: #cfd0d2;
+    font-weight: 700;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+  
+    text-align: start;
+    font-size: 10px;
+  }
+
+  &__field-error {
+    border-bottom: 1px solid #dc2424;
+  }
+
+  &__help-button {
+    display: flex;
+  }
+
+  &__field--double {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    column-gap: 10px;
+    text-align: start;
+  }
+
+  &__input {
+    height: 30px;
+
+    background-color: #f3f6fb;
+    border-color: transparent;
+    border-radius: 2px;
+    outline: none;
+  }
+
+  &__submit-button {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #dc2424 0%, #4a569d  51%, #dc2424  100%);
+    width: 200px;
+    border: none;
+    margin: 10px;
+    padding: 15px 45px;
+  
+    border-radius: 10px;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;            
+
+    transition: 0.3s;
+   
+    &:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

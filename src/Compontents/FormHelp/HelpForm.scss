@@ -1,0 +1,16 @@
+.help__form {
+  font-family: "Geometry-ExtraBold";
+
+  &-title {
+    margin-bottom: 5px;
+    font-size: 44px;
+  }
+
+  &-text {
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    font-family: 'Geometry';
+    font-weight: 700;
+  }
+}

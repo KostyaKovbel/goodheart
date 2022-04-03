@@ -1,0 +1,47 @@
+@import "./utility/variables.scss";
+@import "./utility/fonts/fonts.scss";
+@import "./utility/normilize.scss";
+
+.page {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Gillroy";
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 14px;
+
+    font-family: "Geometry-ExtraBold";
+    font-size: 45px;
+  }
+
+  &__button-place {
+    border: 1px solid $main-color;
+    margin-bottom: 32px;
+    height: max-content;
+    border-radius: 4px;
+    align-self: center;
+    font-family: "Geometry";
+  }
+
+  &__button {
+    font-family: "Geometry";
+    cursor: pointer;    
+    height: 28px;
+    border: none;
+    width: 80px;
+    color: #363c5c;
+    font-size: 10px;
+    background-color: transparent;
+
+    transition: 0.3s;
+
+  }
+
+  &__button--selected {
+    background-color: #363c5c;
+    color: #fff;
+  }
+}

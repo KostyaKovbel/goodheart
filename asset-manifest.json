@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d39c660c.css",
+    "main.js": "/static/js/main.a1b39aa0.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Geometria.ttf": "/static/media/Geometria.0db3c3ee492d73b6c683.ttf",
+    "static/media/Geometria-Bold.ttf": "/static/media/Geometria-Bold.f9fb6a8803ccecf46a2a.ttf",
+    "static/media/Geometria-ExtraBold.ttf": "/static/media/Geometria-ExtraBold.d5689a0884aa3e43fbce.ttf",
+    "static/media/Gilroy-Light.otf": "/static/media/Gilroy-Light.cc7ab55d27205bd64001.otf",
+    "index.html": "/index.html",
+    "main.d39c660c.css.map": "/static/css/main.d39c660c.css.map",
+    "main.a1b39aa0.js.map": "/static/js/main.a1b39aa0.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d39c660c.css",
+    "static/js/main.a1b39aa0.js"
+  ]
+}
