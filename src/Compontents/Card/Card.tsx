@@ -8,24 +8,22 @@ type Props = {
 export const Card: React.FC<Props> = ({ resetTogler }) => {
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-  const [nums1, setNums1] = useState('')
-  const [nums2, setNums2] = useState('')
-  const [nums3, setNums3] = useState('')
-  const [nums4, setNums4] = useState('')
-
-
+  const [nums1, setNums1] = useState('');
+  const [nums2, setNums2] = useState('');
+  const [nums3, setNums3] = useState('');
+  const [nums4, setNums4] = useState('');
 
   const [CVV, setCVV] = useState('');
   const [dateExpired, setDateExpired] = useState('');
 
   const reset = () => {
-    setNums1('')
-    setNums2('')
-    setNums3('')
-    setNums4('')
-    setCVV('')
-    setDateExpired('')
-  }
+    setNums1('');
+    setNums2('');
+    setNums3('');
+    setNums4('');
+    setCVV('');
+    setDateExpired('');
+  };
 
   useEffect(() => {
     reset();
@@ -38,7 +36,7 @@ export const Card: React.FC<Props> = ({ resetTogler }) => {
       if (event.target.value.split('').every(char => numbers.includes(char))) {
         changer(event.target.value);
       }
-  }
+  };
 
   const formatDate = (event: React.ChangeEvent<HTMLInputElement>) => {
     const date = event.target.value;
@@ -48,7 +46,7 @@ export const Card: React.FC<Props> = ({ resetTogler }) => {
     } else {
       setDateExpired(date);
     }
-  }
+  };
 
   return (
     <div className="card">
@@ -111,7 +109,7 @@ export const Card: React.FC<Props> = ({ resetTogler }) => {
             <p className="card__info-title">Термін дії</p>
             <input 
               className="card__field card__security-field" 
-              type="text" 
+              type="text"
               required
               minLength={5}
               maxLength={5}
@@ -126,7 +124,7 @@ export const Card: React.FC<Props> = ({ resetTogler }) => {
             <p className="card__info-title">CVC/CVV</p>
             <input 
               className="card__field card__security-field" 
-              type="text" 
+              type="text"
               required
               minLength={3}
               maxLength={3}

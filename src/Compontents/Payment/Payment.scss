@@ -69,4 +69,37 @@
       border-color: #926399;
     }
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__type-section {
+      margin-bottom: 8px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__buttons-place {
+      margin: 0 auto;
+
+      justify-content: center;
+      max-width: 300px;
+      gap: 4px;
+    }
+
+    &__bill {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

@@ -60,7 +60,7 @@ export const Payment: React.FC<Props> = ({ resetTogler }) => {
         </div>
       </div>
 
-      <div >
+      <div className="payment__bill">
         {isPrivatVisible && <Card resetTogler={resetTogler} />}
         {isVisaVisible && <Card resetTogler={resetTogler} />}
       </div>

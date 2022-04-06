@@ -11,6 +11,10 @@
     flex-direction: column;
     border-radius: 10px;
     background-color: $additional-color;
+
+    &--error {
+      background-color: #dc2424;
+    }
   }
 
   &__title {
@@ -40,7 +44,6 @@
     border: none;
     height: 26px;
     border-radius: 4px;
-
   }
 
   &__number-field {
@@ -54,5 +57,9 @@
 
   &__security-field {
     width: 90px;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 270px;
   }
 }

@@ -44,4 +44,10 @@
     background-color: #363c5c;
     color: #fff;
   }
+
+  @media (max-width: 800px) {
+    &__title {
+      font-size: 30px;
+    }
+  }
 }

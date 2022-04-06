@@ -21,6 +21,14 @@ export const UserForm: React.FC = () => {
   const [displayHelp, setDisplayHelp] = useState('moneyHelp');
   const [resetTogler, setResetTogler] = useState(false);
   
+  const [nameError, setNameError] = useState(false);
+  const [surnameError, setSurnameError] = useState(false);
+  const [companyNameError, setCompanyNameError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
+  const [countryError, setCountryError] = useState(false);
+  const [cityError, setCityError] = useState(false);
+  const [adressError, setAdressError] = useState(false);
+  const [stateError, setStateError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [indexError, setIndexError] = useState(false);
 
@@ -66,113 +74,182 @@ export const UserForm: React.FC = () => {
     return re.test(email);
   }
 
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    let valideFields = 10;
+
+    if (name.trim() === '') {
+      setNameError(true);
+      valideFields--;
+    };
+
+    if (surname.trim() === '') {
+      setSurnameError(true);
+      valideFields--;
+    };
+
+    if (country.trim() === '') {
+      setCountryError(true);
+      valideFields--;
+    }
+
+    if (companyName.trim() === '') {
+      setCompanyNameError(true);
+      valideFields--;
+    };
+
+    if (state.trim() === '') {
+      setStateError(true);
+      valideFields--;
+    };
+
+    if (city.trim() === '') {
+      setCityError(true);
+      valideFields--;
+    };
+
+    if (phone.trim() === '') {
+      setPhoneError(true);
+      valideFields--;
+    }
+  
+    if (adress.trim() === '') {
+      setAdressError(true);
+      valideFields--;
+    };
+
+    if (!validateEmail(email)) {
+      setEmailError(true);
+      valideFields--;
+    };
+
+    if (index.length !== 5) {
+      setIndexError(true);
+      valideFields--;
+    };
+
+    if (valideFields !== 10) {
+      return;
+    }
+
+    reset()
+    setResetTogler(!resetTogler);
+  }
+
   return (
     <form 
       className="form"
-      onSubmit={(event) => {
-        event.preventDefault();
-        if (!validateEmail(email)) {
-          setEmailError(true)
-          return
-        }
-
-        if (index.length !== 5) {
-          setIndexError(true);
-          return;
-        }
-
-        reset()
-        setResetTogler(!resetTogler);
-      }} 
+      onSubmit={onSubmit}
     >
       <div className='form__user-info'>
         <div className="form__field--double">
-          <label htmlFor="name" className="form__field">
+          <label
+            htmlFor="name" 
+            className={classNames('form__field', {'form__field--error': nameError})}
+          >
             <p className="form__text">Ім'я</p>
             <input 
               type="text" 
               className="form__input" 
-               required
               value={name}
               onChange={(event) => {
-                charField(event, setName)
+                setNameError(false);
+                charField(event, setName);
               }}
             />
           </label>
 
-          <label htmlFor="surname" className="form__field">
+          <label
+            htmlFor="surname" 
+            className={classNames('form__field', {'form__field--error': surnameError})}
+          >
             <p className="form__text">Прізвище</p>
             <input 
               type="text" 
               className="form__input" 
-              required
               value={surname}
               onChange={(event) => {
-                charField(event, setSurname)
+                setSurnameError(false);
+                charField(event, setSurname);
               }}
             />
           </label>
         </div>
 
-        <label htmlFor="Country" className="form__field">
+        <label
+          htmlFor="country" 
+          className={classNames('form__field', {'form__field--error': countryError})}
+        >
           <p className="form__text">Країна</p>
           <input 
             type="text" 
             className="form__input"
-            required
             value={country}
             onChange={(event) => {
-              charField(event, setCountry)
+              setCountryError(false);
+              charField(event, setCountry);
             }}
           />
         </label>
 
-        <label htmlFor="company" className="form__field">
+        <label
+          htmlFor="company" 
+          className={classNames('form__field', {'form__field--error': companyNameError})}
+        >
           <p className="form__text">Назва компанії, організація</p>
           <input 
             type="text" 
             className="form__input"
-            required
             value={companyName}
             onChange={(event) => {
+              setCompanyNameError(false);
               charField(event, setCompanyName)
             }}
           />
         </label>
 
         <div className="form__field--double">
-          <label htmlFor="city" className="form__field">
+          <label
+            htmlFor="city" 
+            className={classNames('form__field', {'form__field--error': cityError})}
+          >
             <p className="form__text">Місто</p>
             <input 
               type="text" 
               className="form__input"
-              required
               value={city}
               onChange={(event) => {
+                setCityError(false);
                 charField(event, setCity)
               }}
             />
           </label>
-          <label htmlFor="state" className="form__field">
+          <label 
+            htmlFor="state" 
+            className={classNames('form__field', {'form__field--error': stateError})}
+          >
             <p className="form__text">Штат, район</p>
             <input 
               type="text" 
               className="form__input"
-              required
               value={state}
               onChange={(event) => {
+                setStateError(false);
                 charField(event, setState)
               }}
             />
           </label>
         </div>
 
-        <label htmlFor="Email" className={classNames('form__field', {'form__field-error': emailError})}> 
+        <label 
+          htmlFor="Email" 
+          className={classNames('form__field', {'form__field--error': emailError})}
+        > 
           <p className="form__text">Email-адреса</p>
           <input 
             type="text" 
             className="form__input"
-            required
             value={email}
             onChange={(event) => {
               setEmailError(false);
@@ -183,28 +260,34 @@ export const UserForm: React.FC = () => {
 
 
 
-        <label htmlFor="adress" className="form__field">
+        <label
+          htmlFor="adress" 
+          className={classNames('form__field', {'form__field--error': adressError})}
+        >
           <p className="form__text">Адреса</p>
           <input 
             type="text" 
             className="form__input"
-            required
             value={adress}
             onChange={(event) => {
-              setAdress(event.target.value)
+              setAdressError(false);
+              setAdress(event.target.value);
             }}
           />
         </label>
 
-        <label htmlFor="phone" className="form__field">
+        <label
+          htmlFor="phne" 
+          className={classNames('form__field', {'form__field--error': phoneError})}
+        >
           <p className="form__text">Номер телефону</p>
           <input 
             type="text" 
             className="form__input"
-            required
             value={phone}
             onChange={(event) => {
-              numberField(event, setPhone)
+              setPhoneError(false);
+              numberField(event, setPhone);
             }}
           />
         </label>
@@ -212,12 +295,14 @@ export const UserForm: React.FC = () => {
 
 
         <div className="form__field--double">
-          <label htmlFor="index" className={classNames('form__field', {'form__field-error': indexError})}>
+          <label 
+            htmlFor="index" 
+            className={classNames('form__field', {'form__field--error': indexError})}
+          >
             <p className="form__text">Поштовий індекс</p>
             <input 
               type="text" 
               className="form__input"
-              required
               value={index}
               maxLength={5}
               onChange={(event) => {

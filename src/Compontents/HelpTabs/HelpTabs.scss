@@ -49,5 +49,13 @@
 
     transition: 0.3s;
   }
-}
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+
+    &__button-place {
+      padding: 4px;
+    }
+  }
+}
