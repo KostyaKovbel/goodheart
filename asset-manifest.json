@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/goodheart/static/css/main.2ef0c06f.css",
-    "main.js": "/goodheart/static/js/main.8ea39228.js",
+    "main.css": "/goodheart/static/css/main.12f9dc03.css",
+    "main.js": "/goodheart/static/js/main.e19567ad.js",
     "static/media/Geometria.ttf": "/goodheart/static/media/Geometria.0db3c3ee492d73b6c683.ttf",
     "static/media/Geometria-Bold.ttf": "/goodheart/static/media/Geometria-Bold.f9fb6a8803ccecf46a2a.ttf",
     "static/media/Geometria-ExtraBold.ttf": "/goodheart/static/media/Geometria-ExtraBold.d5689a0884aa3e43fbce.ttf",
     "static/media/Gilroy-Light.otf": "/goodheart/static/media/Gilroy-Light.cc7ab55d27205bd64001.otf",
     "index.html": "/goodheart/index.html",
-    "main.2ef0c06f.css.map": "/goodheart/static/css/main.2ef0c06f.css.map",
-    "main.8ea39228.js.map": "/goodheart/static/js/main.8ea39228.js.map"
+    "main.12f9dc03.css.map": "/goodheart/static/css/main.12f9dc03.css.map",
+    "main.e19567ad.js.map": "/goodheart/static/js/main.e19567ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ef0c06f.css",
-    "static/js/main.8ea39228.js"
+    "static/css/main.12f9dc03.css",
+    "static/js/main.e19567ad.js"
   ]
 }
